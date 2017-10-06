@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { FirebaseService } from './services/firebase.service';
+//import { FirebaseService } from './services/firebase.service';
 
 // Firebase configuration
 //import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -26,7 +26,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     //AngularFireDatabaseModule,
     //AngularFireDatabase
   ],
-  providers: [FirebaseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

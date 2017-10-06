@@ -7,25 +7,27 @@
 </div>
 <h2>Here are some links to help you start: </h2>
 <ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  <li *ngFor="let card of cards | async">
+    <div class="container">
+      <img src="{{card.imgUrl}}" alt="">
+      <div class="classified-info">
+          <h2>Name: {{card.name}}</h2>
+          <h3>Price: {{ card.price|currency:'EUR':true }}</h3>
+          <p>{{card.description}}</p>
+      </div>
+    </div>
   </li>
 </ul>
 <ul>
   <li class="text" *ngFor="let item of items | async">
     {{item.name}} - {{ item.body }} . {{item.description}} # {{item.likes}}
+    cenas 
   </li>
 </ul>
 <hr>
 <ul>
   <li *ngFor="let todo of todos | async"
       [class.completed]="todo.completed">
-    {{ todo.description }}
+    {{ todo.description }} - Coiso
   </li>
 </ul>
